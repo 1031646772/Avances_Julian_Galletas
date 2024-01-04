@@ -1,0 +1,87 @@
+
+:root{
+    --color1:#846A31;
+    --color2:#C18E61;
+    --color3:#822121;
+}
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.vector1 img{
+    width: 35rem;
+    margin-left: 0;
+    position: relative;
+    left: -0.7rem;
+    top: 0.5rem;
+}
+.vector1 h3{
+    font-family: 'Poppins-medium', sans-serif;
+    font-size: 1.4rem;
+    color:white;
+    width: 19rem;
+}
+.vector1 h4{
+    font-family: 'Poppins-medium', sans-serif;
+    font-size: 1.4rem;
+    color:white;
+}
+.text-footer{
+    position: relative;
+    top: 13rem;
+    right: -2.7rem;
+    z-index: 1;
+}
+.vector2 .vector2i{
+    position: relative;
+    top:6.5rem ;
+}
+.icons{
+    position: relative;
+    top: 13.5rem;
+    left: -5rem;
+    margin-left: 25rem;
+    z-index: 1;
+} 
+.icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.containerfooter1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.containerfooter2{
+    display: none;
+}
+@media only screen and (max-width: 768px){ 
+    .containerfooter1{
+        display: none;
+    }
+    .containerfooter2{
+        display: flex;
+        flex-direction: column;
+        color: white;
+        background-color: var(--color3);
+        width: auto;
+        height: 17rem;
+        text-align: center;
+        font-family: 2rem;
+    }
+    .container-icons{
+        margin-top: 3%;
+        display: flex;
+        justify-content: space-around;
+    }
+    .face{
+          width: 3.5rem;  
+          height: 3.5rem;   
+    }
+    .wh{
+        width: 4.5rem;  
+        height: 4rem;
+    }
+} 

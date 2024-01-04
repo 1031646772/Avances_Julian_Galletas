@@ -1,0 +1,188 @@
+:root{
+    --color1:#846A31;
+    --color2:#C18E61;
+}
+
+@media only screen and (max-width: 800px) {
+    .vectorcito{
+        display: none;
+    }
+    .Productos{
+        display: hidden;
+    }
+    #messageC{
+        font-size: 2rem;
+        text-align: left;
+        margin-left: 5%;
+    }
+    .card{
+        display: none;
+    }
+    .card2{
+        display: none;
+    }
+    .Conocer-mas{
+        font-size: 1rem;
+        display: block;
+        position: relative;
+        top: -2rem;
+    }
+    .menu{
+        margin-left: 85%;
+        width: 3rem;
+    }
+    .nuestrosp{
+        position: relative;
+        top: 0;
+        right: 0;
+        width: 18rem;
+    }
+    .nuestrosp h2{
+        font-size: 2.2rem;
+    }
+    .logRes{
+        display: block;
+        width: 8rem;
+        margin-top: 0;
+        position: relative;
+        top: -5rem;
+        margin-left: 3%;
+    }
+    body{
+        background-image: url(../Imgs/Fondo_responsive.png);
+    };
+    .container-oculto{
+        display: none;
+    }
+    .productos-res{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        top: -5rem;
+    }
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;   
+       }
+       body{
+           background-color: bisque;
+       }
+       body .productos-res{
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+       }
+       :root{
+           --color1:#846A31;
+           --color2:#C18E61;
+       }
+       .card-res1{
+           background-color: var(--color1);  
+           width: 15rem;
+           height: 13rem;
+           margin-top: 10%;
+           border-radius: 2rem;
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           text-align: center;
+           
+       }
+       .card-res img{
+           width: 13rem;
+           height: 9.5rem;
+           border: 0.5rem solid var(--color2);
+           border-radius: 3rem;
+           margin-top: 5%;
+       }
+       .card-res h1{
+           font-family: 'Poppins-medium', sans-serif;
+           margin-top: 2%;
+           font-size: 1.7rem;
+           color: white;
+           width: 10rem;
+       }
+       /* por si se pasa de la longitud deseada en el nombre*/
+       .card-res2{
+           background-color: var(--color1);  
+           width: 15rem;
+           height: 15rem;
+           margin-top: 10%;
+           border-radius: 2rem;
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           text-align: center;
+           
+       }
+       .card-res2 img{
+           width: 13rem;
+           height: 9.5rem;
+           border: 0.5rem solid var(--color2);
+           border-radius: 3rem;
+           margin-top: 5%;
+       }
+       .card-res2 h1{
+           font-family: 'Poppins-medium', sans-serif;
+           margin-top: 2%;
+           font-size: 1.7rem;
+           color: white;
+           width: 10rem;
+       }
+       
+       /* estilos contenedor semi transparente*/
+       .container-oculto{
+           position: fixed;
+           top: 0;
+           left: 0;
+           width: 100%;
+           height: 100%;
+           background-color: rgba(0, 0, 0, 0.5);
+           z-index: 2;
+       }
+       .boton-cerrar-modal{
+           width: rem;
+           font-size: 2rem;
+           border: none;
+           background-color: transparent;
+           color: white;
+           margin-top: 20%;
+           display: flex;
+           margin-left: 85%;
+       }
+       .card-desc{
+           background-color: var(--color2);
+           width: 17rem;
+           height: 25rem;
+           margin-top: 1rem;
+           margin-left: 15%;
+           border-radius: 2rem;
+       }
+       .card-desc img{
+           margin-top: 2rem;
+           border-radius: 5rem;
+           width: 11rem;
+           height: 9rem;
+           margin-left: 2.8rem;
+       }
+       .card-desc h1{
+           font-family: 'Poppins',sans-serif;
+           color: white;
+           text-align: center;
+       }
+       .card-desc p{
+           font-family: 'Poppins-medium',sans-serif;
+           color: white;
+           text-align: center;
+           width: 13rem;
+           margin-top: 1rem;
+           margin-left: 12%;
+       }
+       .title-container{
+           font-family: 'Poppins-medium',sans-serif;
+           color: white;
+           text-align: center;
+       }
+                 
+}

@@ -1,0 +1,196 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --color1:#846A31;
+    --color2:#C18E61;
+}
+body{
+    background-image:url(../Imgs/Fondo.png) ;
+}
+
+.Container-mother--{
+    position: relative;
+    top: -5rem;
+}
+.nuestrosp{
+    margin-left: 3%;
+    border-bottom: 0.1rem solid black;
+    width: 24rem;
+    position: relative;
+    top: -7rem;
+}
+.nuestrosp h2{
+    font-family: 'Lobster', sans-serif;
+    font-size: 3rem;
+}
+.Productos{
+    position: relative;
+    top: -4rem;
+}
+.logRes{
+    display: none;
+}
+body .Productos{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: -4%;
+}
+#messageC{
+    font-size: 2.5rem;
+    text-align: center;
+    display: none;
+}
+.card{
+    display: flex;
+    background-color: #846A31;
+    border-radius: 10rem;
+    width: 56rem;
+    padding: 1rem;
+    margin-top: 2rem;
+    margin-left: 12%;
+}
+.card:hover{
+    cursor: pointer;
+    background-color: var(--color2);
+}
+.card:hover img{
+    border: 1rem solid var(--color1); 
+}
+.card img{
+    border-radius: 12rem;
+    border: 1rem solid var(--color2);
+    width: 13.5rem;
+    height: 13.5rem;
+}
+.card .Texto-card{
+    margin-left: 1rem;
+}
+.card h1{
+    font-family: 'Poppins-medium', sans-serif;
+    color: white;
+    font-size: 2.7rem;
+}
+.card p{
+    margin-top: 2%;
+    width:30rem;
+    font-family: 'Poppins-medium', sans-serif;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.card2{
+    display: flex;
+    background-color: #846A31;
+    border-radius: 10rem;
+    width: 56rem;
+    padding: 1rem;
+    margin-top: 2rem;
+    margin-left: 12%;
+}
+.card2:hover{
+    background-color: var(--color2);
+    cursor: pointer; 
+}
+.card2:hover img{
+    border: 1rem solid var(--color1); 
+}
+.card2 img{
+    border-radius: 12rem;
+    margin-left: 3%;
+    border: 1rem solid var(--color2);
+    width: 13.5rem;
+    height: 13.5rem;
+}
+.card2 .Texto-card{
+    margin-left: 5rem;
+    margin-top: 1%;
+}
+.card2 h1{
+    font-family: 'Poppins-medium', sans-serif;
+    color: white;
+    font-size: 2.7rem;
+}
+.card2 p{
+    margin-top: 2%;
+    width:30rem;
+    font-family: 'Poppins-medium', sans-serif;
+    font-size: 1.5rem;
+    color: white;
+}
+.Conocer-mas {
+    font-family: 'Poppins-medium', sans-serif;
+    font-size: 1.5rem;
+    background-color: var(--color2);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 0;
+    margin-bottom: 0%;
+}
+
+.container-oculto{
+    display: none;
+}
+.productos-res{
+    display: none;
+}
+
+/*Contactanos*/
+
+.contactacion{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.seguro{
+    width: auto;
+    padding: 1rem;
+    border-radius: 2rem;
+    background-color: var(--color2);
+    text-align: center;
+    color: white;
+    font-size: 1rem;
+}
+.seguro h1{
+    width: 30rem;
+}
+.seguro h2{
+    margin-left: 85%;
+    font-size: 2rem;
+}
+.seguro h2:hover{
+    cursor: pointer;
+    color: var(--color1);
+}
+.seguro button{
+    margin-top: 2rem;
+    width:9rem;
+    height: 3rem;
+    border-radius:1rem ;
+    background-color: var(--color1);
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+}
+.seguro button:hover{
+    cursor: pointer;
+    background-color: #a78233;
+}
+.contactaGa{
+    width: 10rem;
+}

@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    top: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --color1:#846A31;
+    --color2:#C18E61;
+    --colorC:#846A31;
+    --boton:#D9731A;
+}
+body{
+    background-image: url(../Imgs/Fondo.png);
+}
+#titleI{
+    font-family: 'Lobster', sans-serif;
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 9%;
+}
+.container-Mother{
+    display: flex;
+    flex-direction: row;
+    background-color: #846A31;
+    width: 54rem;
+    height: 32rem;
+    padding: 2rem;
+    margin-left: 10%;
+    border-radius: 1rem;
+}
+.container-Mother .logito{
+    width: 15rem;
+    height: 17rem;
+}
+.containerImg-text p{
+    text-align: center;
+    width: 20rem;
+    color: white;
+    margin-bottom: 3%;
+    font-family: 'Poppins', sans-serif;
+}
+.containerImg-text img{
+    margin-left: 15%;
+}
+.container-Mother .container-form{
+    display: flex;
+    flex-direction: column;
+    margin-left: 8%;
+}
+.container-form form{
+   display: flex;
+   flex-direction: column;
+   margin-left: 10%;
+}
+.container-form form button{
+    background-color: var(--boton);
+    color: white;
+    border: 1px solid black;
+    border-radius: 1rem;
+    width: 7rem;
+    height: 4rem;
+    font-size: 1.3rem;
+    margin-top: 8%;
+    margin-left: 35%;
+    font-family: 'Questrial',sans-serif;
+}
+.container-form form button:hover{
+    background-color: #ee7e1d;
+    cursor: pointer;
+}
+.container-Mother label{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    color: white;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.container-Mother input{
+    width: 20rem;
+    height: 2rem;
+    background-color: var(--color2);
+    border: 2px solid white;
+    border-radius: 0.3rem;
+    color: white;
+    text-indent: 4px;
+}
+
+@media only screen and (max-width:800px){
+    .container-Mother{
+        margin-top: 6%;
+        flex-direction: column;
+        height: auto;
+        width: 20rem;
+    }
+    .containerImg-text .logito{
+        width: 13rem;
+        height: 14rem;
+        margin-left: 10%;
+    }
+    .containerImg-text p{
+        display: none;
+    }
+    .container-form #titleI{
+        margin-left: 0;
+        font-size: 2.2rem;
+    }
+    #Formulario{
+        margin-left: 0;
+    }
+    #Formulario label{
+        font-size: 1rem;
+    }
+    #Formulario input{
+        width: 14rem;
+    }
+    #Formulario button{
+        font-size: 1.2rem;
+        margin-left: 30%;
+        width: 5.5rem;
+        height: 3rem;
+    }
+}

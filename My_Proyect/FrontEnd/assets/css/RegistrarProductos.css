@@ -1,0 +1,150 @@
+:root{
+    --color1:#846A31;
+    --color2:#C18E61;
+    --color8:#473835;
+    --color4:#D9731A;
+    --color6:#822121;
+}
+*{
+    margin: 0%;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(../Imgs/Fondo_registrarP.png);
+}
+.container-mother{
+    display: flex;
+}
+.logo{
+    margin-left: 8%;
+    width: 15rem;
+    height: 18rem;
+}
+.containerForm{
+    margin-left: 6%;
+    position: relative;
+    top: -4.5rem;
+    width: 50rem;
+}
+.title{
+    text-align: center;
+}
+.title h1{
+    font-family: 'Lobster', sans-serif;
+    font-size:3rem;
+}
+.title h2{
+    font-family: 'Preahvihear', sans-serif;
+    font-size: 4rem;
+}
+#form{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    right: -2rem;
+}
+.container-datos-img{
+    display: flex;
+    position: relative;
+    right: -4rem;
+}
+.imagen{
+    display: flex;
+    flex-direction: column;
+}
+.imagen h1{
+    font-family: 'Poppins-regular',sans-serif;
+    color: white;
+    position: relative;
+    top: 7.5rem;
+    margin-left: 20%;
+}
+.imagen .previewImagenn{
+    background-color: var(--color8);
+    width: 15rem;
+    height: 13rem;
+    border-radius: 1.5rem;
+}
+.imagen .previewImagenn img{
+    background-color: var(--color8);
+    margin-top: 1rem;
+    margin-left: 2rem;
+    width: 11rem;
+    height: 11rem;
+    border-radius: 1.5rem;
+}
+.imagen #select{
+    background-color: var(--color4);
+    width: 8rem;
+    height: 3rem;
+    font-family: 'Questrial', sans-serif;
+    margin-left:22%;
+    margin-top: 4%;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    color: white;
+    text-align: center;
+    padding-top: 0.5rem;
+}
+.imagen #select:hover{
+    background-color: #ee8224;
+    cursor: pointer;
+}
+.imagen .file{
+    width: 0.1px; /* Tamaño casi cero */
+    height: 0.1px; /* Tamaño casi cero */
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+    cursor: pointer;
+    visibility: hidden;
+}
+.datos{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+    margin-top: 3%;
+}
+.datos label{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+}
+.datos #Nombre{
+    background-color: var(--color2);
+    border-radius: 0.3rem;
+    height: 2rem;
+    color: white;
+    text-indent: 5px;
+    border: 2px solid black;
+}
+#enviarF{
+    background-color: var(--color6);
+    color: white;
+    font-family:'Questrial', sans-serif;
+    width: 7rem;
+    height: 4rem;
+    font-size: 1.5rem;
+    margin-left: 40%;
+    margin-top: 4%;
+    border-radius: 0.5rem;
+    z-index: 1;
+}
+#enviarF:hover{
+    background-color: #b92f2f;
+    cursor: pointer;
+}
+
+.datos #Descripcion{
+    background-color: var(--color2);
+    border-radius: 0.3rem;
+    height: 10rem;
+    padding: 1rem;
+    color: white;
+    font-size: 1rem;
+    line-height: 1.5;
+    border: 2px solid black;
+}
+

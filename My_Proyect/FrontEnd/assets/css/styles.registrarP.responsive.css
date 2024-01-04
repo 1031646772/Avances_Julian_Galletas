@@ -1,0 +1,99 @@
+:root{
+    --color1:#846A31;
+    --color2:#C18E61;
+    --color8:#473835;
+    --color4:#D9731A;
+    --color6:#822121;
+}
+
+@media only screen and (max-width: 800px) {
+    .vectorcito{
+        display: none;
+    }
+    body{
+        background-image: url(../Imgs/Fondo_responsive.png);
+    }
+    #hamburguesa{
+        margin-left: 85%;
+        margin-top: 0;
+    }
+    .container-mother{
+        display: flex;
+        flex-direction: column;
+    }
+    .logo{
+        width: 6rem;
+        height: 7rem;
+        position: relative;
+        top:-5rem;
+        margin-left: 6%;
+    }
+    .title{
+        text-align: left;
+    }
+    .title h1{
+        font-size: 2rem;
+    }
+    .title h2{
+        width: 22rem;
+        font-size: 2.5rem;
+    }
+    .container-datos-img{
+        display: flex;
+        flex-direction: column;
+    }
+    .containerForm{
+        width: 18rem;
+    }
+    #form{
+        margin-left: 0;
+        right: 0;
+    }
+    #h1img{
+        font-size: 1.5rem;
+        margin-left: 25%;
+    }
+    .imagen #select{
+        margin-left:20%;
+    }
+    .imagen{
+        margin-bottom: 10%;
+    }
+    .datos{
+        margin-left: 0;
+        position: relative;
+        left: -3rem;
+        margin-top: 3%;
+    }
+    .datos label{
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.5rem;
+    }
+    .datos #Nombre{
+        background-color: var(--color2);
+        border-radius: 0.3rem;
+        height: 2rem;
+        color: white;
+        text-indent: 5px;
+        border: 2px solid black;
+        width: 20rem;
+    }
+    #enviarF{
+        width: 6rem;
+        height: 3rem;
+        font-size: 1.5rem;
+        margin-left: 45%;
+        margin-top: 4%;
+        margin-bottom: 70%;
+    }
+    #enviarF:hover{
+        background-color: #b92f2f;
+        cursor: pointer;
+    }
+    
+    .datos #Descripcion{
+        width: 20rem;
+        margin-bottom: 5%;
+    }
+    
+}
