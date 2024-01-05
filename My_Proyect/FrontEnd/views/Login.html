@@ -10,23 +10,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins&family=Questrial&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container-Mother">
-        <div class="containerImg-text">
-            <img src="../assets/Imgs/Logo.png" alt="" class="logito">
-            <p>¡Bienvenido a nuestro rincón de delicias!</p>
-            <p> Inicia sesión para sumergirte en un mundo dulce de galletas y hojaldres irresistibles. ¡Estamos emocionados de tenerte aquí!</p>
-        </div>
-        <div class="container-form">
-            <h1 id="titleI">Ingresa tus datos</h1>
-            <form id="Formulario">
-                <label for="Nombre">Nombre de usuario</label>
-                <input type="text" id="Nombre">
-                <label for="Contrasena">Contraseña</label>
-                <input type="password" id="Contrasena">
-                <button type="submit">Enviar</button>
-            </form>
+    <div class="container-modal" id="ModalLogin">
+        <div class="container-Mother">
+            <div class="containerImg-text">
+                <img src="../assets/Imgs/Logo.png" alt="" class="logito">
+                <p>¡Bienvenido a nuestro rincón de delicias!</p>
+                <p> Inicia sesión para sumergirte en un mundo dulce de galletas y hojaldres irresistibles. ¡Estamos emocionados de tenerte aquí!</p>
+            </div>
+            <div class="container-form">
+                <h1 id="titleI">Ingresa tus datos</h1>
+                <form id="Formulario">
+                    <label for="Nombre">Nombre de usuario</label>
+                    <input type="text" id="Nombre">
+                    <label for="Contrasena">Contraseña</label>
+                    <input type="password" id="Contrasena">
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+            <h1 class="CerrarLo" id="Cerrar-login">X</h1>
         </div>
     </div>
+    <Button id="Abrir-login">Abrir</Button>
     <script src="../assets/js/login.js"></script>
 </body>
 </html>

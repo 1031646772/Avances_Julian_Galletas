@@ -1,0 +1,24 @@
+
+.Cargando{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.9;
+    position: fixed;
+    z-index: 2;
+}
+.Cargando img{
+    width: 20rem;
+    background-color: white;
+}
+.Cargando h2 {
+    position: relative;
+    left: -4rem;
+    margin-top: 0;
+    font-family: 'Poppins',sans-serif;
+    font-size: 2rem;
+    opacity: 0.6;
+}

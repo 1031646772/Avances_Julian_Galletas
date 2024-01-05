@@ -1,5 +1,37 @@
 const form=document.getElementById("Formulario");
 
+const botonA=document.getElementById("Abrir-login");
+const botonC=document.getElementById("Cerrar-login")
+const modal=document.querySelector(".container-Mother")
+const contanierModal=document.getElementById("ModalLogin")
+
+
+botonA.addEventListener("click", ()=>{
+    contanierModal.style.display="flex"
+    body.style.overflow="hidden"
+})
+
+botonC.addEventListener("click", ()=>{
+    modal.style.animation = 'Menu2 1s ease-in-out';
+    // Agrega un escuchador para el evento 'animationend'
+    modal.addEventListener("animationend", () => {
+        modal.style.display = "none";
+    }, { once: true });
+    setInterval(quitarAnimacion,1000)
+})
+
+contanierModal.addEventListener("click", (event)=>{
+    if (event.target === contanierModal) {
+        contanierModal.style.display="none"
+        body.style.overflow="auto"
+    }
+})
+
+function quitarAnimacion(){
+    contanierModal.style.display="none"
+    body.style.overflow="auto"
+}
+
 form.addEventListener("submit", async(e)=>{
     console.log("entro")
     e.preventDefault()

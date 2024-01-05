@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", async(e)=>{
 const container_productos2=document.getElementById("productos-resM");
 
 function leerProductosMobile(){
-    let nuevoDIV
+    let nuevoDIV=""
     let contadorr = 1
     arreglo_Objetos.forEach(function (item){
         console.log(item.Imagen)
@@ -97,7 +97,7 @@ function leerProductosMobile(){
 const container_modals=document.getElementById("containerModals")
 function CrearModal(){
     indice=1
-    let nuevoDIV
+    let nuevoDIV=""
     arreglo_Objetos.forEach(function (item){
         nuevoDIV += `
         <div class="container-oculto" id="modal${indice}">

@@ -26,8 +26,8 @@ body{
     width: 54rem;
     height: 32rem;
     padding: 2rem;
-    margin-left: 10%;
     border-radius: 1rem;
+    animation: Menu 1s;
 }
 .container-Mother .logito{
     width: 15rem;
@@ -85,6 +85,53 @@ body{
     color: white;
     text-indent: 4px;
 }
+#ModalLogin{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    z-index: 1;
+    display: none;
+}
+
+.CerrarLo{
+    position: relative; 
+    right: -2rem; 
+    font-family: 'Poppins',sans-serif;
+    color: white;
+    top: -1rem;
+}
+.CerrarLo:hover{
+    font-size: 2.4rem;
+    cursor: pointer;
+    position: relative;
+    top: -1.4rem;
+}
+
+@keyframes Menu {
+    0% {
+        opacity: 0;
+        transform: translateY(-10rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes Menu2 {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-3rem);
+    }
+}
 
 @media only screen and (max-width:800px){
     .container-Mother{
@@ -121,3 +168,4 @@ body{
         height: 3rem;
     }
 }
+

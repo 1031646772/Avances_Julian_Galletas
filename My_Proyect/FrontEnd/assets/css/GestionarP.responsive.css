@@ -1,0 +1,78 @@
+:root{
+    --colorR:#F67070;
+    --color1:#846A31;
+    --color2:#C18E61;
+    --colorC:#846A31;
+    --boton:#D9731A;
+}
+@media only screen and (max-width:800px){
+    body{
+        background-image: url(../Imgs/Fondo_responsive.png)
+    }
+    .menu{
+        width: 3rem;
+        height: 3rem;
+        position: relative;
+        top: -1rem;
+        margin-left: 83%;
+    }
+    .vectorcito{
+        display: none;
+     }
+    .ContainerButtons{
+        top: 0;
+        margin-top: 5%;
+        margin-bottom: 68%;
+        flex-direction: column;
+    }
+    .logito{
+        display: none;
+    }
+    .imgMobile{
+        display: block;
+        right: 0;
+        margin-left: 0;
+        left: 2rem;
+        margin-top: 2rem;
+    }
+    #title{
+        top: 0;
+        margin-top: 20%;
+        font-size: 2rem;
+    }
+    .containerB2{
+        margin-left:0%;
+        text-align: center;
+    }
+    .containerB2 button{
+        width: 14rem;
+        height: 14rem;
+        border-radius: 2.3rem;
+        padding: 1rem;
+    }
+    .containerB2 button img{
+        width: 12rem;
+        height: 12rem;
+    }
+    .containerB1{
+        margin-top: 5%;
+        margin-left:0%;
+        text-align: center;
+    }
+    .containerB1 button{
+        width: 14rem;
+        height: 14rem;
+        border-radius: 2.3rem;
+        padding: 1rem;
+    }
+    .containerB1 button img{
+        width: 12rem;
+        height: 12rem;
+    }
+    .containerB2 h1{
+        font-size: 1.8rem;
+    }
+    .containerB1 h1{
+        font-size: 1.8rem;
+    }
+}

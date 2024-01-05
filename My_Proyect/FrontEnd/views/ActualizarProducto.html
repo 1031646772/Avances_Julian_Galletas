@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registrar Producto</title>
+    <title>Actualizar Producto</title>
     <link rel="stylesheet" href="../assets/css/navbar.css">
     <link rel="stylesheet" href="../assets/css/RegistrarProductos.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -44,7 +44,7 @@
         <div class="containerForm">
             <div class="title">
                 <h1>Galletas y Hojaldres</h1>
-                <h2>Nuevo Producto</h2>
+                <h2>Actualizar Producto</h2>
             </div>
             <form id="form">
                 <div class="container-datos-img">
@@ -55,6 +55,7 @@
                         <input type="file" class="file" id="imgfile" accept="image/*">
                     </div>
                     <div class="datos">
+                        <input type="hidden" id="Id">
                         <label for="Nombre">Nombre Producto</label>
                         <input type="text" id="Nombre">
                         <label for="Descripcion">Descripcion Producto</label>
@@ -94,8 +95,7 @@
             </div>
         </div>
     </footer>
-    <script src="../assets/js/RegistrarP.js"></script>
+    <script src="../assets/js/ActualizarProducto.js"></script>
     <script src="../assets/js/Carga.js"></script>
-    <scripts src="../assets/js/footer.js"></script>
 </body>
 </html>

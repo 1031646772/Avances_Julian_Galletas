@@ -11,9 +11,6 @@ create table Producto(
 	Imagen NVARCHAR(255),
 	Nombre Varchar(70),
 	Descripcion Varchar(255),
-    Estado enum ("Activo", "Inactivo"),
-    IdUser int not null,
-    foreign key (IdUser)references User(Id_user)
+    Estado enum ("Activo", "Inactivo") default "Activo"
 );
-
-
+select * from Producto;

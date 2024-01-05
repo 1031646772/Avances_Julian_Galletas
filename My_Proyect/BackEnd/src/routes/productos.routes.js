@@ -5,12 +5,18 @@ const {Router}=require('express')
 const router=Router();
 
 //Tomando lo que se exporto de user.controller para usarlo
-const {anadirProductoNuevo,consultarProductos}=require('../controllers/productos.controllers');
+const {anadirProductoNuevo,consultarProductos,EliminarP,TomarDatos,EnviarDatos,ActualizarP,ActivarP,ConsultarProductosI}=require('../controllers/productos.controllers');
 const { route } = require('../config/app');
 
 
 router.post('/CrearProducto',anadirProductoNuevo);
 router.post('/ConsultarProducto',consultarProductos);
+router.post('/ConsultarIProducto',ConsultarProductosI);
+router.post('/EliminarProducto',EliminarP);
+router.post('/LeerProducto',TomarDatos);
+router.post('/TraerDatos',EnviarDatos);
+router.post('/ActualizarP',ActualizarP);
+router.post('/ActivarProducto',ActivarP);
 
 //Lo exportamos para usarlo en app.js
 module.exports=router

@@ -2,7 +2,7 @@
 :root{
     --color1:#846A31;
     --color2:#C18E61;
-    --color3:#822121;
+    --color33:#822121;
 }
 footer{
     display: flex;
@@ -49,6 +49,25 @@ footer{
     flex-direction: row;
     justify-content: space-around;
 }
+.icons .wha{
+    width: 5rem;
+    height: 4.7rem;
+}
+.icons .facee{
+    width: 4rem;
+    height: 4.7rem;
+}
+.icons .wha:hover{
+    width: 4.7rem;
+    height: 4.3rem;
+    cursor: pointer;
+}
+.icons .facee:hover{
+    width: 3.7rem;
+    height: 4.3rem;
+    cursor: pointer;
+}
+
 .containerfooter1{
     display: flex;
     flex-direction: row;
@@ -57,6 +76,7 @@ footer{
 .containerfooter2{
     display: none;
 }
+
 @media only screen and (max-width: 768px){ 
     .containerfooter1{
         display: none;
@@ -65,7 +85,7 @@ footer{
         display: flex;
         flex-direction: column;
         color: white;
-        background-color: var(--color3);
+        background-color: var(--color33);
         width: auto;
         height: 17rem;
         text-align: center;

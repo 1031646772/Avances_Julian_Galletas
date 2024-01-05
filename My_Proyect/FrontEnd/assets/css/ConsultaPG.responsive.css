@@ -1,0 +1,102 @@
+:root{
+    --color1:#846A31;
+    --color2:#b77c39;
+    --color3:#744803;
+   
+}
+@media only screen and (max-width:800px) {   
+    body{
+        background-image:url(../Imgs/Fondo_responsive.png) ;
+    }
+    .logRes{
+        display: block;
+    }
+    .logDes{
+        display: none;
+    }
+    .nuestrosp{
+       margin-top: 5%;
+       width: 25rem;
+    }
+    .nuestrosp h2{
+        text-align: center;
+        font-family: 'Lobster', sans-serif;
+        font-size: 3rem;
+    }
+    #messageC{
+        text-align: center;
+        display: none;
+    }
+    .Container-mother--{
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center
+    }
+    .Productos{
+        position: relative;
+        top: -3rem;
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .card{
+        margin-left: 2%;
+        margin-top: 3%;
+        background-color: var(--color3);
+        border-radius: 3rem;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .card img{
+        width: 13rem;
+        height: 10rem;
+        border: 6px solid var(--color2);
+        border-radius: 3rem;
+    }
+    .card h1{
+        text-align: center;
+        color: white;
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.6rem;
+    }
+    .containerButton button{
+        background-color: var(--color1);
+        color: white;
+        border: none;
+        width: 7rem;
+        height: 2rem;
+        font-size: 1.1rem;
+        margin-top: 5%;
+        border-radius: 0.5rem;
+    }
+    .containerButton button:hover{
+        background-color:#a1823e ;
+        cursor: pointer;
+    }
+    
+    .Container--In{
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center
+    }
+    .nuestrospi{
+        position: relative;
+        top: -4rem;
+        color: black;
+     }
+     .nuestrospi h2{
+         text-align: center;
+         font-family: 'Lobster', sans-serif;
+         font-size: 3rem;
+     }
+     #messageCi{
+         text-align: center;
+         display: none;
+     }
+     
+}

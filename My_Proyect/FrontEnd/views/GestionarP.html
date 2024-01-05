@@ -3,22 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registrar Producto</title>
+    <title>Productos</title>
     <link rel="stylesheet" href="../assets/css/navbar.css">
-    <link rel="stylesheet" href="../assets/css/RegistrarProductos.css">
+    <link rel="stylesheet" href="../assets/css/GestionarP.styles.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
+    <link rel="stylesheet" href="../assets/css/GestionarP.responsive.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins&family=Preahvihear&family=Questrial&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/footer.css">
-    <link rel="stylesheet" href="../assets/css/styles.registrarP.responsive.css">
     <link rel="stylesheet" href="../assets/css/Cargando.css">
 </head>
-<body style="height: 58rem;">
-    <script 
-     src="https://widget.cloudinary.com/v2.0/global/all.js" 
-     type="text/javascript">
-    </script>
-    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+<body>
     <div class="Cargando">
         <img src="../assets/Imgs/Carga.gif" alt="">
         <h2>Cargando...</h2>
@@ -37,35 +32,20 @@
             <li>Contáctanos</li>
             <li>Quiénes Somos</li>
         </ul>
+        <img src="../assets/Imgs/Logo.png" alt="" class="logito">
     </div>
-    <!--Container mother-->
-    <div class="container-mother">
-        <img src="../assets/Imgs/logo.png" class="logo">
-        <div class="containerForm">
-            <div class="title">
-                <h1>Galletas y Hojaldres</h1>
-                <h2>Nuevo Producto</h2>
-            </div>
-            <form id="form">
-                <div class="container-datos-img">
-                    <div class="imagen">
-                        <h1 id="h1img">IMAGEN</h1>
-                        <div class="previewImagenn"></div>
-                        <label id="select">Seleccionar Imagen</label>
-                        <input type="file" class="file" id="imgfile" accept="image/*">
-                    </div>
-                    <div class="datos">
-                        <label for="Nombre">Nombre Producto</label>
-                        <input type="text" id="Nombre">
-                        <label for="Descripcion">Descripcion Producto</label>
-                        <textarea name="" id="Descripcion"></textarea>
-                    </div>
-                </div>
-                <button type="submit" id="enviarF">ENVIAR</button>
-            </form>
+    <h1 id="title">Que quieres gestionar</h1>
+    <div class="ContainerButtons">
+        <div class="containerB2">
+            <button id="boton1"><img src="../assets/Imgs/hornear.png" alt=""></button>
+            <h1>Crear Nuevo Producto</h1>
+        </div>
+        <div class="containerB1">
+            <button id="boton2"><img src="../assets/Imgs/pan-de-jengibre.png"></button>
+            <h1>Actualizar y eliminar</h1>
         </div>
     </div>
-    <footer style="position: relative; top: -10rem;">
+    <footer style="position: relative; top: -15rem;">
         <div class="containerfooter1">
             <div class="vector1">
                 <div class="text-footer">
@@ -94,8 +74,7 @@
             </div>
         </div>
     </footer>
-    <script src="../assets/js/RegistrarP.js"></script>
+    <script src="../assets/js/GestionarP.js"></script>
     <script src="../assets/js/Carga.js"></script>
-    <scripts src="../assets/js/footer.js"></script>
 </body>
 </html>

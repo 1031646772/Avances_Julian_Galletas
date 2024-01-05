@@ -3,22 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registrar Producto</title>
-    <link rel="stylesheet" href="../assets/css/navbar.css">
-    <link rel="stylesheet" href="../assets/css/RegistrarProductos.css">
+    <title>Nuestros Productos</title>
+    <link rel="stylesheet" href="../assets/css/footer.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins&family=Preahvihear&family=Questrial&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/footer.css">
-    <link rel="stylesheet" href="../assets/css/styles.registrarP.responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/navbar.css">
+    <link rel="stylesheet" href="../assets/css/styles.Reponsive.css">
+    <link rel="stylesheet" href="../assets/css/ConsultaPG.css">
+    <link rel="stylesheet" href="../assets/css/ConsultaPG.responsive.css">
     <link rel="stylesheet" href="../assets/css/Cargando.css">
 </head>
-<body style="height: 58rem;">
-    <script 
-     src="https://widget.cloudinary.com/v2.0/global/all.js" 
-     type="text/javascript">
-    </script>
-    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+<body>
     <div class="Cargando">
         <img src="../assets/Imgs/Carga.gif" alt="">
         <h2>Cargando...</h2>
@@ -27,7 +23,7 @@
     <img src="../assets/Imgs/menu.svg" class="menu" id="hamburguesa">
     <img src="../assets/Imgs/Logo.png" class="imgMobile">
     <img src="../assets/Imgs/vector-nav.png" alt="" class="vectorcito">
-    <div class="nav" id="menu_emer">
+    <div class="nav" id="menu_emer" >
         <div class="head">
             <img src="../assets/Imgs/Logo.png">
             <h1 id="cerrarMenu">X</h1>
@@ -37,35 +33,24 @@
             <li>Contáctanos</li>
             <li>Quiénes Somos</li>
         </ul>
+        <img src="../assets/Imgs/logo.png" class="logDes" >
     </div>
-    <!--Container mother-->
-    <div class="container-mother">
-        <img src="../assets/Imgs/logo.png" class="logo">
-        <div class="containerForm">
-            <div class="title">
-                <h1>Galletas y Hojaldres</h1>
-                <h2>Nuevo Producto</h2>
-            </div>
-            <form id="form">
-                <div class="container-datos-img">
-                    <div class="imagen">
-                        <h1 id="h1img">IMAGEN</h1>
-                        <div class="previewImagenn"></div>
-                        <label id="select">Seleccionar Imagen</label>
-                        <input type="file" class="file" id="imgfile" accept="image/*">
-                    </div>
-                    <div class="datos">
-                        <label for="Nombre">Nombre Producto</label>
-                        <input type="text" id="Nombre">
-                        <label for="Descripcion">Descripcion Producto</label>
-                        <textarea name="" id="Descripcion"></textarea>
-                    </div>
-                </div>
-                <button type="submit" id="enviarF">ENVIAR</button>
-            </form>
+    <img src="../assets/Imgs/logo.png" class="logRes">
+    <div class="Container-mother--">
+        <div class="nuestrosp">
+            <h2>Nuestros Productos Activos</H2>
         </div>
+        <h1 id="messageC">No hay Productos disponibles por el momento</h1>
+        <div class="Productos" id="ProductosN"></div>
     </div>
-    <footer style="position: relative; top: -10rem;">
+    <div class="Container--In">
+        <div class="nuestrospi">
+            <h2>Nuestros Productos Inactivos</H2>
+        </div>
+        <h1 id="messageCi">No hay Productos inactivos</h1>
+        <div class="Productos" id="ProductosI"></div>
+    </div>
+    <footer>
         <div class="containerfooter1">
             <div class="vector1">
                 <div class="text-footer">
@@ -94,8 +79,9 @@
             </div>
         </div>
     </footer>
-    <script src="../assets/js/RegistrarP.js"></script>
+    <script src="../assets/js/menu.js"></script>
+    <script src="../assets/js/ConsultaPG.js"></script>
     <script src="../assets/js/Carga.js"></script>
-    <scripts src="../assets/js/footer.js"></script>
 </body>
+
 </html>

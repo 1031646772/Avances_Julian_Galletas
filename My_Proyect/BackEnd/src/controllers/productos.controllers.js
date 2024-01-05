@@ -25,9 +25,27 @@ function consultarProductos(req,res){
    const {confirmacion}=req.body
    try{
        if(confirmacion==true){
-        const Squery= `select Imagen, Nombre, Descripcion from Producto;`
+        const Squery= `select * from Producto where Estado="Activo";`
         const Exquery=mysql2.format(Squery)
-        database.query(Squery, (err, result)=>{
+        database.query(Exquery, (err, result)=>{
+          if (err)throw err
+          else if(result !== undefined){
+             res.send(result)
+          }
+        })
+       }
+   }
+   catch(Err){
+       console.log("Error al hacer la insercion", Err);
+   }
+}
+function ConsultarProductosI(req, res){
+  const {confirmacion}=req.body
+   try{
+       if(confirmacion==true){
+        const Squery= `select * from Producto where Estado="Inactivo";`
+        const Exquery=mysql2.format(Squery)
+        database.query(Exquery, (err, result)=>{
           if (err)throw err
           else if(result !== undefined){
              res.send(result)
@@ -40,8 +58,111 @@ function consultarProductos(req,res){
    }
 }
 
+let DatosP={
+  Id_Produ:"",
+  Image:"",
+  Nombr:"",
+  Descrip:"",
+}
+function getDATOS(){
+  return DatosP
+}
+
+
+function TomarDatos(req, res){
+  const {id}=req.body;
+  try{
+    const Squery=`select * from Producto where Id_Producto=${id};`;
+    const Exquery=mysql2.format(Squery);
+    database.query(Exquery,(err, result)=>{
+      let Producto=result[0];
+      DatosP.Id_Produ=Producto.Id_Producto
+      DatosP.Image=Producto.Imagen
+      DatosP.Nombr=Producto.Nombre
+      DatosP.Descrip=Producto.Descripcion
+      getDATOS()
+      res.json({message:"Se leyo"})
+    })
+  }
+  catch(err){
+    console.log("Algo paso al leer Producto",err)
+  }
+}
+
+function EliminarP(req, res){
+  const {id}=req.body
+  try{
+    const Squery=`update Producto set Estado="Inactivo" where Id_Producto=${id};`
+    const Exquery=mysql2.format(Squery)
+    database.query(Exquery,(err)=>{
+      if (err)throw err
+      else{
+        res.json({message:"Producto Eliminado"});
+      }
+    })
+  }
+  catch(err){
+    console.log("No se pudo ejecutar el query", err)
+  }
+}
+
+function ActivarP(req, res){
+  const {id}=req.body
+  try{
+    const Squery=`update Producto set Estado="Activo" where Id_Producto=${id};`
+    const Exquery=mysql2.format(Squery)
+    database.query(Exquery,(err)=>{
+      if (err)throw err
+      else{
+        res.json({message:"Producto Activado"});
+      }
+    })
+  }
+  catch(err){
+    console.log("No se pudo ejecutar el query", err)
+  }
+}
+
+function ActualizarP(req, res){
+  const {id, Nombr, Descripcio, Image}=req.body
+  try{
+    const Squery=`update Producto set Nombre='${Nombr}', Descripcion='${Descripcio}', Imagen='${Image}' where Id_Producto=${id};`
+    const Exquery=mysql2.format(Squery)
+    database.query(Exquery,(err)=>{
+      if (err)throw err
+      else{
+        res.json({message:"Producto Actualizado"});
+      }
+    })
+  }
+  catch(err){
+    console.log("No se pudo ejecutar el query", err)
+  }
+}
+
+function EnviarDatos(req,res){
+  const{confirmacion}=req.body
+  try{
+    if (confirmacion==true){
+      let Array=getDATOS()
+      res.send(Array)
+    }
+    else{
+      res.send("No se pudo enviar objeto algo pasa")
+    }
+  }
+  catch(err){
+    console.log("No se pudo devolver objeto",err)
+  }
+}
 
 module.exports={
   anadirProductoNuevo,
-  consultarProductos
+  consultarProductos,
+  ConsultarProductosI,
+  ActivarP,
+  EliminarP,
+  TomarDatos,
+  EnviarDatos,
+  ActualizarP
 }
