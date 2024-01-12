@@ -75,6 +75,7 @@ document.addEventListener("DOMContentLoaded", async(e)=>{
                 CrearModal()
                 anadirEventos()
                 EventoContactenos()
+                añadirEventosBotonCon()
                 mensajito.style.display="none"
                 //llamamos las funciones que utilizaran este arreglo 
                 // y ya no mostraremos el mensaje
@@ -86,7 +87,10 @@ document.addEventListener("DOMContentLoaded", async(e)=>{
         })
     }
     catch(err){
-        console.error("Error en la solicitud fetch:", error);
+        console.error("Error en la solicitud fetch:", err);
+        //si el arreglo no tiene objetos mostrara el mensajito
+        let mensajito=document.getElementById("messageC");
+        mensajito.style.display="block"
     }
 });
 
@@ -132,6 +136,7 @@ function CrearModal(){
                 <div class="text-desc">
                     <h1>${item.Nombre}</h1>
                     <p>${item.Descripcion}</p>
+                    <button class="productoContac">Contactanos</button>
                 </div>
             </div>
         </div>
@@ -196,3 +201,11 @@ function EventoContactenos(){
     })
 }
 
+function añadirEventosBotonCon(){
+    const botonContacta=document.querySelectorAll(".productoContac");
+    botonContacta.forEach(function (item){
+        item.addEventListener("click", function(){
+            window.location.href="RegistrarProducto.html"
+        })
+    })
+}

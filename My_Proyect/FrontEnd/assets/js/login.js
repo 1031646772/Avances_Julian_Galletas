@@ -1,45 +1,45 @@
-// Traemos elemenetos del DOM como contenedores, formularios, botones etc
-
-const form=document.getElementById("Formulario");
-
-const botonA=document.getElementById("Abrir-login");
-const botonC=document.getElementById("Cerrar-login")
-const modal=document.querySelector(".container-Mother")
-const contanierModal=document.getElementById("ModalLogin")
-
+const form = document.getElementById("Formulario");
+const botonA = document.getElementById("Abrir-login");
+const botonC = document.getElementById("Cerrar-login");
+const modal = document.querySelector(".container-Mother");
+const contanierModal = document.getElementById("ModalLogin");
+const body=document.body
 // Añadimos eventos para el click al boton de abrir modal 
-botonA.addEventListener("click", ()=>{
-    //Aqui el contendor del modal se alteran los estilos, para que aparezca e pantalla
-    contanierModal.style.display="flex"
-    // Para que no hayan desplazamiento cuando este el modal presente, sobretodo de la barra
-    body.style.overflow="hidden"
-})
+botonA.addEventListener("click", () => {
+    // Aplica la animación 'Menu' al abrir el modal
+    modal.style.animation = 'Menu 1s ease-in-out';
+    contanierModal.style.display = "flex";
+    modal.style.display="flex"
+    body.style.overflow = "hidden";
+});
 
-botonC.addEventListener("click", ()=>{
-    // Ahora se hace lo mismo con el de cerrarç
-    // Se añade las animaciones del menu 2 para cuando desaparezca el modal
+botonC.addEventListener("click", () => {
+    // Agrega la animación 'Menu2' al cerrar el modal
     modal.style.animation = 'Menu2 1s ease-in-out';
     // Agrega un escuchador para el evento 'animationend'
-    modal.addEventListener("animationend", () => {
-        modal.style.display = "none";
-    }, { once: true });
-    setInterval(quitarAnimacion,1000)
-    // Quita la animacion despues de 2 segundos
-})
+    modal.addEventListener("animationend", quitarAnimacion, { once: true });
+});
 
-contanierModal.addEventListener("click", (event)=>{
+contanierModal.addEventListener("click", (event) => {
     if (event.target === contanierModal) {
-        contanierModal.style.display="none"
-        body.style.overflow="auto"
+        quitarAnimacion();
     }
-    //Esto evita y valida que solo tome el evento para el contendor cuando se pulsa en el y no el el contenido por ejemplo en el formulario
-})
+});
 
-//Quita la animacion 
-function quitarAnimacion(){
+function quitarAnimacion() {
+    // Restaura la visualización del modal a su estado inicial
     contanierModal.style.display="none"
-    body.style.overflow="auto"
+    modal.style.display = "none";
+    body.style.overflow = "auto";
+    // Reinicia la animación para futuras aperturas
+    modal.style.animation = 'none';
+    // Forza un reflow para que la animación se reinicie correctamente
+    void modal.offsetWidth;
+    // Restablece la animación
+    modal.style.animation = null;
+    
 }
+
 
 //Evento listener para cuando se envie el formulario 
 // Ejecuta una funcion asincrona 

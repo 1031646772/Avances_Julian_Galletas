@@ -14,6 +14,34 @@ body{
 .logRes{
     display: none;
 }
+.barraBus{
+    margin-left: 38%;
+    position: relative;
+    top: -10rem;
+}
+.barraBus input{
+    width: 24rem;
+    background-color: var(--color2);
+    color: white;
+    border: none;
+    height: 2.8rem;
+    font-size: 1rem;
+    text-indent: 8px;
+    border-radius: 1rem;
+}
+.barraBus input::placeholder{
+    color: white;
+}
+.barraBus button{
+    background-color: transparent;
+    border: none;
+    position: relative;
+    left: -3rem;
+    top: 0.5rem;
+}
+.barraBus button:hover{
+    cursor: pointer;
+}
 .logDes{
     margin-bottom: 0;
     width: 12rem;
@@ -32,6 +60,8 @@ body{
     font-size: 3rem;
 }
 #messageC{
+    position: relative;
+    top: -5rem;
     text-align: center;
     display: none;
 }

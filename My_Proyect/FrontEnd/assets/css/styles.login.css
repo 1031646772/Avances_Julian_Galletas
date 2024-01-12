@@ -167,5 +167,15 @@ body{
         width: 5.5rem;
         height: 3rem;
     }
+    .CerrarLo{
+        margin-top: 0;
+        top: -33rem;
+        left: -0.5rem;
+    }
+    .CerrarLo:hover{
+        margin-top: 0;
+        top: -33.3rem;
+        left: -0.5rem; 
+    }
 }
 

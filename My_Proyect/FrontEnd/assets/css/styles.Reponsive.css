@@ -1,6 +1,7 @@
 :root{
     --color1:#846A31;
     --color2:#C18E61;
+    --colorRojito:#822121;
 }
 
 @media only screen and (max-width: 800px) {
@@ -154,7 +155,7 @@
        .card-desc{
            background-color: var(--color2);
            width: 17rem;
-           height: 25rem;
+           height: auto;
            margin-top: 1rem;
            margin-left: 15%;
            border-radius: 2rem;
@@ -184,5 +185,19 @@
            color: white;
            text-align: center;
        }
-                 
+       .productoContac{
+        background-color: var(--colorRojito);
+        margin-left: 33%;
+        color: white;
+        border: none;
+        height: 2rem;
+        width: 6rem;
+        border-radius: 1rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+       } 
+       .productoContac:hover{
+        background-color:#9b2929
+       }      
+       
 }

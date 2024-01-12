@@ -7,6 +7,7 @@
 @media only screen and (max-width:800px) {   
     body{
         background-image:url(../Imgs/Fondo_responsive.png) ;
+        height: auto;
     }
     .logRes{
         display: block;
@@ -24,6 +25,8 @@
         font-size: 3rem;
     }
     #messageC{
+        position: relative;
+        top: -3rem;
         text-align: center;
         display: none;
     }
@@ -85,6 +88,7 @@
         justify-content: center
     }
     .nuestrospi{
+        margin-top: 10%;
         position: relative;
         top: -4rem;
         color: black;
@@ -97,6 +101,44 @@
      #messageCi{
          text-align: center;
          display: none;
+         position: relative;
+         margin-top: -7%;
+         margin-bottom: 7%;
      }
-     
+     .barraBus{
+        margin-left: 8%;
+        top: -3rem;
+    }
+    .barraBus input{
+        font-size: 0.9rem;
+        width: 21rem;
+    }
+    .barraBus button{
+        top: -2.5rem;
+        left: 0;
+        margin-left: 75%;
+    }
+}
+@media only screen and (min-width:315px) and (max-width:380px){
+    .barraBus button{
+        top: -2.5rem;
+        left: 0;
+        margin-left: 80%;
+    }
+
+}
+@media only screen and (min-width:384px) and (max-width:396px){
+    .barraBus button{
+        top: -2.5rem;
+        left: 0;
+        margin-left: 80%;
+    }
+    
+}
+@media only screen and(min-width:420px) and(max-width:435px){
+    body{
+        background-image:url(../Imgs/Fondo_responsive.png) ;
+        background-size: cover;
+        height: auto;
+    }
 }

@@ -156,6 +156,24 @@ function EnviarDatos(req,res){
   }
 }
 
+function ConsultaBarraBus(req, res){
+  const {valorBusqueda}=req.body
+  try{ 
+    const Squery=`select * from Producto where Nombre like '%${valorBusqueda}%';`
+    const Exquery=mysql2.format(Squery);
+    database.query(Exquery, (err, result)=>{
+      if (err) throw err
+      else{
+        let producto= result[0];
+        res.send(producto);
+      }
+    })
+  }
+  catch(err){
+    console.log("No se pudo contactar o ejecutar en la BD", err)
+  }
+
+}
 module.exports={
   anadirProductoNuevo,
   consultarProductos,
@@ -164,5 +182,6 @@ module.exports={
   EliminarP,
   TomarDatos,
   EnviarDatos,
-  ActualizarP
+  ActualizarP,
+  ConsultaBarraBus
 }

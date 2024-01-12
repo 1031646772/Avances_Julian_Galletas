@@ -77,7 +77,8 @@ footer{
     display: none;
 }
 
-@media only screen and (max-width: 768px){ 
+@media only screen and (max-width: 800px){ 
+    
     .containerfooter1{
         display: none;
     }
@@ -90,6 +91,8 @@ footer{
         height: 17rem;
         text-align: center;
         font-family: 2rem;
+        width:430px;
+        height: 27rem;
     }
     .container-icons{
         margin-top: 3%;
@@ -105,3 +108,31 @@ footer{
         height: 4rem;
     }
 } 
+@media only screen and  (max-width:375px) {
+    .containerfooter2{
+        display: flex;
+        flex-direction: column;
+        color: white;
+        background-color: var(--color33);
+        width: auto;
+        height: 17rem;
+        text-align: center;
+        font-family: 2rem;
+        width:414px;
+        height: auto;
+    }
+}
+@media only screen and  (max-width:390px) and (min-width:380px){
+    .containerfooter2{
+        display: flex;
+        flex-direction: column;
+        color: white;
+        background-color: var(--color33);
+        width: auto;
+        height: 17rem;
+        text-align: center;
+        font-family: 2rem;
+        width:414px;
+        height: 25rem;
+    }
+}

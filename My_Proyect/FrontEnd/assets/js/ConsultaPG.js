@@ -9,30 +9,39 @@ const ContainerProductosInact=document.getElementById("ProductosI")
 // por medio de una funcion asincrona esperando una respuesta de por medio
 
 document.addEventListener("DOMContentLoaded", async (e)=>{
-    //El enpoint que vemos abajo tiene que como fin realizar una consulta en la base de datos para devolver lo que son los productos activos 
-    const renponse= await fetch('http://127.0.0.1:3000/producto/ConsultarProducto',{
-        method:"POST",
-        headers:{
-            'Content-Type': "application/json",
-        },
-        body: JSON.stringify({confirmacion:true}),
-    }).then((response)=>response.json()).then((data)=>{
-        // Esta consulta por medio de una solicitud tiene una respuesta con una data por eso
-        // en la linea anterior lo que se hace es establecer promesas
-        let Productos=data;
-        // Productos es igual a esa data en este caso lo que seria los objetos (cada objeto es un producto)
-        if(Productos.length > 0){
-            // Se valida que productos tengan valores y aparte de esto si no esta vacio se llama la funcion leerP
-            leerP(Productos)
-            let mensaje=document.getElementById("messageC")
-            mensaje.style.display="none"
-        }
-        else{
-            console.log("No tiene nada")
-            let mensaje=document.getElementById("messageC")
-            mensaje.style.display="block"
-        }
-    })
+    //Usamos try y catch para validar errores en las solicitudes
+    try{
+        //El enpoint que vemos abajo tiene que como fin realizar una consulta en la base de datos para devolver lo que son los productos activos 
+        const renponse= await fetch('http://127.0.0.1:3000/producto/ConsultarProducto',{
+            method:"POST",
+            headers:{
+                'Content-Type': "application/json",
+            },
+            body: JSON.stringify({confirmacion:true}),
+            }).then((response)=>response.json()).then((data)=>{
+            // Esta consulta por medio de una solicitud tiene una respuesta con una data por eso
+            // en la linea anterior lo que se hace es establecer promesas
+            let Productos=data;
+            // Productos es igual a esa data en este caso lo que seria los objetos (cada objeto es un producto)
+            if(Productos.length > 0){
+                // Se valida que productos tengan valores y aparte de esto si no esta vacio se llama la funcion leerP
+                leerP(Productos)
+                let mensaje=document.getElementById("messageC")
+                mensaje.style.display="none"
+            }
+            else{
+                console.log("No tiene nada")
+                let mensaje=document.getElementById("messageC")
+                mensaje.style.display="block"
+            }
+        })
+    }
+    catch(err){
+        console.log("Error en la solicitud fetch", err);
+        let mensaje=document.getElementById("messageC")
+        mensaje.style.display="block"
+    }
+    try{
     // Esta porcion de codigo cumple la funcion anterior solo que trae los productos inactivos
     const renpons= await fetch('http://127.0.0.1:3000/producto/ConsultarIProducto',{
         method:"POST",
@@ -53,6 +62,12 @@ document.addEventListener("DOMContentLoaded", async (e)=>{
             mensaje.style.display="block"
         }
     })
+    }
+    catch(err){
+        console.log("Error en la solicitud fetch", err)
+        let mensaje=document.getElementById("messageCi")
+        mensaje.style.display="block"
+    }
 })
 
 
