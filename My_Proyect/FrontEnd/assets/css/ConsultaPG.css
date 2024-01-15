@@ -32,6 +32,10 @@ body{
 .barraBus input::placeholder{
     color: white;
 }
+.message_Barra{
+    display: none;
+    text-align: center;
+}
 .barraBus button{
     background-color: transparent;
     border: none;
@@ -131,4 +135,3 @@ body{
      text-align: center;
      display: none;
  }
-

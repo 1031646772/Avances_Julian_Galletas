@@ -164,8 +164,13 @@ function ConsultaBarraBus(req, res){
     database.query(Exquery, (err, result)=>{
       if (err) throw err
       else{
-        let producto= result[0];
-        res.send(producto);
+        let producto= result;
+        if(result.length > 0){
+          res.json({message:producto});
+        }
+        else{
+          res.json({message:"No hay coincidencias"})
+        }
       }
     })
   }
