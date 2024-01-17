@@ -68,7 +68,7 @@ form.addEventListener("submit", async(e)=>{
                 if(valor==="Usuario encontrado"){
                     alert ("Bienvenido");
                     // Permitimos el acceso
-                    window.location.href="./RegistrarProducto.html"
+                    window.location.href="./GestionarP.html"
                 }
                 else{
                     alert("Usuario o contraseña incorrectos, reintente")
