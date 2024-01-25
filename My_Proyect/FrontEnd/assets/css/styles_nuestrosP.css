@@ -19,8 +19,8 @@ body{
     margin-left: 3%;
     border-bottom: 0.1rem solid black;
     width: 24rem;
-    position: relative;
-    top: -7rem;
+    margin-top: 8%;
+    margin-bottom: 3%;
 }
 .nuestrosp h2{
     font-family: 'Lobster', sans-serif;

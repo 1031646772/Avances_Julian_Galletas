@@ -19,16 +19,12 @@ body{
     text-align: center;
     font-family: 'Lobster', sans-serif;
     font-size: 3rem;
-    position: relative;
-    top: -20rem;
 }
 .ContainerButtons{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin-top: 0;
-    position: relative;
-    top: -15rem;
+    margin-top: 5%;
 }
 .containerB2 button{
     background-color: var(--colorR);
@@ -53,7 +49,7 @@ body{
     background-color: #ff8484;
 }
 .logito{
-    margin-left: 0;
-    position: relative;
-    left: -10rem;
+    margin-left: 28%;
+    width: 18%;
+    height: 18%;
 }

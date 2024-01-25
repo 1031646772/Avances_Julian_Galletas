@@ -87,7 +87,7 @@ form.addEventListener("submit", async(e)=>{
                     alert ("Bienvenido");
                     limpiarCampos()
                     // Permitimos el acceso
-                    window.location.href="./GestionarP.html"
+                    window.location.href="./views/GestionarP.html"
                 }
                 else{
                     alert("Usuario o contraseña incorrectos, reintente")
