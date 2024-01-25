@@ -10,9 +10,6 @@
     --colorC:#846A31;
     --boton:#D9731A;
 }
-body{
-    background-image: url(../Imgs/Fondo.png);
-}
 #titleI{
     font-family: 'Lobster', sans-serif;
     font-size: 3.5rem;
@@ -135,10 +132,12 @@ body{
 
 @media only screen and (max-width:800px){
     .container-Mother{
-        margin-top: 6%;
         flex-direction: column;
         height: auto;
         width: 20rem;
+        position: relative;
+        left: -6rem;
+        top: -15rem;
     }
     .containerImg-text .logito{
         width: 13rem;

@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@300;400;500&family=Preahvihear&display=swap');
+
+* {
+    margin: 0;
+    top: 0;
+    font-family: 'Poppins';
+}
+
+:root {
+    --1: white;
+    --2: black;
+    --3: #D9731A;
+    --4: #E8B77F;
+    --5: #732C02;
+    --6: #C18E61;
+    --7: #221816;
+    --8: #846A31;
+    --9: #9F3B00;
+    --10: #bc681e;
+}
+
+body{
+    background-image: url('../Imgs/contactanos.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.logo{
+    width: 18%;
+    margin-right: 15rem;
+    margin-top: 5rem;
+}
+
+.galletas{
+    width: 100%;
+    margin-top: -6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.galletas .text1{
+    width: 80%;
+}
+
+.text1 h1{
+    width: 80%;
+    font-family: 'Lobster';
+    font-size: 500%;
+    font-weight: 100;
+}
+
+.galletas .contact {
+    width: 70%;
+    margin-top: 8rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contact .img {
+    width: 40rem;
+    height: 19rem;
+    background-image: url('../Imgs/contacVector.png');
+    background-repeat: no-repeat;
+    background-size: 80%;
+}
+
+.img img {
+    width: 10rem;
+    margin-left: 6rem;
+    margin-top: 4rem;
+}
+
+.galletas .text2{
+    width: 40%;
+}
+
+.text2 h1 {
+    font-family: 'Preahvihear';
+    font-size: 200%;
+    font-weight: 200;
+}
+
+@media screen and (min-width: 1600px) {
+    .contact .img {
+        width: 40rem;
+        height: 25rem;  
+    }
+
+    .img img {
+        width: 15rem;
+        margin-left: 8rem;
+        margin-top: 4rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    body {
+        background-image: url('../Imgs/contactanosRes.png');   
+    }
+
+    .galletas{
+        margin-top: 3rem;
+    }
+
+    .text1 h1 {
+        font-size: 200%;
+    }
+    
+    .galletas .contact {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .contact .img {
+        width: 12rem;
+        height: 9rem;
+        background-size: 100% 90%;
+    }
+
+    .img img {
+        width: 5rem;
+        margin-left: 3.5rem;
+        margin-top: 1.6rem;
+    }
+
+    .text2 h1 {
+        font-size: 100%;
+        width: 100%;
+    }
+}

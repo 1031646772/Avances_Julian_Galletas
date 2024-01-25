@@ -57,14 +57,17 @@ footer{
     width: 4rem;
     height: 4.7rem;
 }
-.icons .wha:hover{
-    width: 4.7rem;
+.icons .wha:hover {
+    width: 4.8rem;
     height: 4.3rem;
+    margin: 0.2rem; /* Ajusta el margen según sea necesario */
     cursor: pointer;
 }
-.icons .facee:hover{
+
+.icons .facee:hover {
     width: 3.7rem;
     height: 4.3rem;
+    margin: 0.2rem; /* Ajusta el margen según sea necesario */
     cursor: pointer;
 }
 

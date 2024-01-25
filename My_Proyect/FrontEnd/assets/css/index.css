@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@300;400;500&display=swap');
+
+* {
+    margin: 0;
+    top: 0;
+    font-family: 'Poppins';
+}
+
+:root {
+    --1: white;
+    --2: black;
+    --3: #D9731A;
+    --4: #E8B77F;
+    --5: #732C02;
+    --6: #C18E61;
+    --7: #221816;
+    --8: #846A31;
+    --9: #9F3B00;
+    --10: #bc681e;
+}
+
+body {
+    background-image: url("../Imgs/index.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+
+/* Text galletas 1 */
+.textGalletas1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 42rem;
+}
+
+.textGalletas1 .text1 {
+    padding-inline-start: 11%;
+    margin-top: 7%;
+}
+
+.text1 h1 {
+    font-family: 'Lobster';
+    font-size: 400%;
+    font-weight: 100;
+    width: 100%;
+}
+
+.text1 p {
+    width: 70%;
+    margin-top: 2rem;
+    font-size: 180%;
+    text-align: justify;
+}
+
+.imgVec1 {
+    margin-top: 10rem;
+    width: 100%;
+    background-image: url('../Imgs/vectorImg.svg');
+    background-repeat: no-repeat;
+    background-size: 80%;
+}
+
+.imgVec1 img{
+    width: 72%;
+    margin-left: 1.6rem;
+    margin-top: .5rem;
+}
+
+/* Text galletas 2 */
+.textGalletas2 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.imgVec2 {
+    width: 100%;
+    background-image: url('../Imgs/vectorImg.svg');
+    background-repeat: no-repeat;
+    background-size: 80%;
+    margin-top: -6%;
+    margin-left: 14%;
+}
+
+.imgVec2 img {
+    width: 72%;
+    margin-left: 1.7rem;
+    margin-top: 1rem;
+}
+
+.textGalletas2 .text2 {
+    margin-top: 15rem;
+    margin-left: 7rem;
+}
+
+.text2 input {
+    margin-bottom: 8%;
+    margin-left: 7%;
+    padding: 3%;
+    font-size: 200%;
+    border-radius: 1rem;
+    background-color: var(--3);
+    color: var(--1);
+    cursor: pointer;
+}
+
+.text2 input:hover {
+    background-color: var(--10);
+}
+
+.text2 p {
+    font-size: 180%;
+    text-align: justify;
+    width: 80%;
+}
+
+@media screen and (max-width: 1440px){
+    /* Text galletas 1 */
+    .textGalletas1 {
+        height: 35rem;
+    }
+
+    .text1 p {
+        font-size: 150%;
+    }
+
+    /* Text galletas 2 */
+    .imgVec2 {
+        background-size: 90%;
+        margin-top: -6%;
+        margin-left: 18%;
+    }
+
+    .imgVec2 img {
+        width: 82%;
+        margin-left: 1rem;
+        margin-top: .5rem;
+    }
+
+    .textGalletas2 .text2 {
+        margin-top: 10rem;
+        margin-left: 10rem;
+    }
+
+    .text2 input {
+        padding: 2%;
+    }
+
+    .text2 p {
+        font-size: 140%;
+    }
+}
+
+
+@media screen and (max-width: 1280px){
+    /* Text galletas 1 */
+    .textGalletas1 {
+        width: 100%;
+        height: 30rem;
+    }
+
+    .text1 h1 {
+        font-size: 300%;
+    }
+
+    .text1 p {
+        font-size: 150%;
+    }
+
+    .imgVec1 img{
+        margin-left: 1rem;
+        margin-top: .4rem;
+    }
+
+    /* Text galletas 2 */
+    .imgVec2 {
+        background-size: 90%;
+        margin-top: -6%;
+        margin-left: 18%;
+    }
+
+    .imgVec2 img {
+        width: 82%;
+        margin-left: 1rem;
+        margin-top: .5rem;
+    }
+
+    .textGalletas2 .text2 {
+        margin-top: 10rem;
+        margin-left: 10rem;
+    }
+
+    .text2 input {
+        padding: 2%;
+    }
+
+    .text2 p {
+        font-size: 150%;
+    }
+}
+
+@media screen and (max-width: 415px){
+    body{
+        background-image: url("../Imgs/indexRes.png");
+    }
+
+    /* Text galletas 1 */
+    .textGalletas1 {
+        display: flex;
+        flex-direction: column;
+        height: 20rem;
+        margin-top: 2rem;
+    }
+
+    .textGalletas1 .text1 {
+        margin-top: 0%;
+    }
+
+    .text1 h1 {
+        font-size: 200%;    
+    }
+
+    .text1 p {
+        width: 80%;
+        font-size: 80%;
+        margin-top: .5rem;
+    }
+
+    .imgVec1 {
+        margin-left: 12rem;
+        margin-top: 0rem;
+        width: 100%;
+        height: 30rem;
+        background-size: 11rem;
+    }
+
+    .imgVec1 img{
+        margin-top: 0rem;
+        width: 10rem;
+        margin-left: .5rem;
+    }
+
+    /* Text galletas 2 */
+    .textGalletas2 {
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .imgVec2 {
+        background-size: 11rem;
+        margin-left: 2rem;
+        margin-top: -15rem;
+    }
+
+    .imgVec2 img {
+        width: 10rem;
+        margin-left: .5rem;
+        margin-top: .2rem;
+    }
+
+    .textGalletas2 .text2 {
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: end;
+        margin-top: 1rem;
+        margin-left: -2rem;
+    }
+
+    .text2 p {
+        font-size: 80%; 
+        text-align: end;
+        width: 50%;
+    }
+
+    .text2 input {
+        padding: 2%;
+        border-radius: .5rem;
+        font-size: 70%;
+        margin-top: 10rem;
+    }
+
+}

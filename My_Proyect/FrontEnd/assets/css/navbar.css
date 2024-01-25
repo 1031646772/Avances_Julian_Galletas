@@ -5,9 +5,7 @@
     top: 0;
     font-family: 'Poppins';
 }
-.vectorcito{
-    width: 50rem;
-}
+
 :root {
     --1: white;
     --2: black;
@@ -24,9 +22,8 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    position: relative;
-    top: -14rem;
-    left: -1rem;
+    margin-top: 1%;
+    margin-left: 1%;
 }
 
 .head {
@@ -34,9 +31,9 @@
 }
 
 .nav .logDes {
-    margin-right: 5rem;
-    width: 12rem;
-    
+    margin-right: 10rem;
+    height: 15%;
+    width: 10%;
 }
 
 .imgMobile {
@@ -62,11 +59,11 @@
     text-align: center;
 }
 
-.menu {
+.menu{
     display: none;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1024px) {
 
     .nav .logDes {
         display: none;
@@ -78,16 +75,26 @@
         justify-content: center;
         flex-direction: column;
         align-items: center;
-        height: 25rem;
+        width: 100%;
+        height: 13rem;
         background-color: var(--5);
     }
 
     .head {
-        margin-left: 2rem;
         width: 78%;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+    }
+
+    .head h1{
+        font-size: 200%;
+        color: var(--1);
+    }
+
+    .head img {
+        height: 2rem;
+        width: 2rem;
     }
     
     .nav ul {
@@ -100,32 +107,19 @@
     }
 
     .nav ul li {
-        margin-top: 2rem;
+        margin-top: .8rem;
         background-color: var(--9);
         color: var(--1);
         text-align: center;
         border-radius: 1rem;
         width: 180%;
-        font-size: 2.5rem;
+        height: 2rem;
+        font-size: 1.2rem;
         font-weight: 500;
     }
 
-    .head h1{
-        position: relative;
-        top: 4rem;
-        font-size: 200%;
-        color: var(--1);
-    }
-
-    .head img {
-        position: relative;
-        top: 2rem;
-        height: 5rem;
-        width: 5rem;
-    }
-
     .imgMobile {
-        display: none;
+        display: block;
         position: absolute;
         right: 5%;
         top: .8%;
@@ -134,30 +128,10 @@
 
     .menu {
         display: block;
-        margin-top: 2rem;
-        margin-left: 2rem;
+        margin-top: 0rem;
+        margin-left: 1rem;
         height: 10%;
         width: 10%;
         cursor: pointer;
-    }
-}
-
-@keyframes Menu {
-    0% {
-        opacity: 0;
-        transform: translateY(-10rem);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-@keyframes Menu2 {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-        transform: translateY(-3rem);
     }
 }

@@ -1,9 +1,27 @@
 const form = document.getElementById("Formulario");
 const botonA = document.getElementById("Abrir-login");
+const botonAReponsive = document.getElementById("Abrir-loginn");
 const botonC = document.getElementById("Cerrar-login");
 const modal = document.querySelector(".container-Mother");
 const contanierModal = document.getElementById("ModalLogin");
 const body=document.body
+
+document.addEventListener("DOMContentLoaded", () => {
+    const user = document.getElementById("Nombre");
+    const contrasena = document.getElementById("Contrasena");
+    if (user!=null && contrasena!=null) {
+        user.value = "";
+        contrasena.value = "";
+    }
+});
+
+botonAReponsive.addEventListener("click",() =>{
+    // Aplica la animación 'Menu' al abrir el modal
+    modal.style.animation = 'Menu 1s ease-in-out';
+    contanierModal.style.display = "flex";
+    modal.style.display="flex"
+    body.style.overflow = "hidden";
+})
 // Añadimos eventos para el click al boton de abrir modal 
 botonA.addEventListener("click", () => {
     // Aplica la animación 'Menu' al abrir el modal
@@ -67,17 +85,21 @@ form.addEventListener("submit", async(e)=>{
                 let valor= data.message;
                 if(valor==="Usuario encontrado"){
                     alert ("Bienvenido");
+                    limpiarCampos()
                     // Permitimos el acceso
                     window.location.href="./GestionarP.html"
                 }
                 else{
                     alert("Usuario o contraseña incorrectos, reintente")
+                    limpiarCampos()
                 }
             })
         }
         catch(err){
             //Por si falla al hacer la solicitud fetch 
             console.log("Algo fallo al hacer la solicitud fetch", err)
+            alert("No se esta enviando la solicitud al servidor, contactese con soporte por favor")
+            limpiarCampos()
         }
     }
     else{
@@ -85,3 +107,13 @@ form.addEventListener("submit", async(e)=>{
     }
     
 })
+
+
+
+function limpiarCampos(){
+   // Limpiar los campos del formulario
+    const user = document.getElementById("Nombre");
+    const contrasena = document.getElementById("Contrasena");
+    user.value = "";
+    contrasena.value = "";
+}

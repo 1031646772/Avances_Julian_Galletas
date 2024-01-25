@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@300;400;500&family=Preahvihear&display=swap');
+
+* {
+    margin: 0;
+    top: 0;
+    font-family: 'Poppins';
+}
+
+:root {
+    --1: white;
+    --2: black;
+    --3: #D9731A;
+    --4: #E8B77F;
+    --5: #732C02;
+    --6: #C18E61;
+    --7: #221816;
+    --8: #846A31;
+    --9: #9F3B00;
+    --10: #bc681e;
+}
+
+body {
+    background-image: url('../Imgs/quienesSomos.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.logo {
+    width: 18%;
+    margin-right: 15rem;
+    margin-top: 5rem;
+}
+
+.galletas {
+    width: 100%;
+    margin-top: -6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5rem;
+}
+
+.galletas .text1 {
+    width: 80%;
+}
+
+.text1 h1 {
+    width: 80%;
+    font-family: 'Lobster';
+    font-size: 450%;
+    font-weight: 100;
+}
+
+.text1 p {
+    width: 70%;
+    margin-top: 2rem;
+    font-family: 'Preahvihear';
+    font-size: 280%;
+    font-weight: 150;
+    text-align: justify;
+}
+
+.cont {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.cont h1 {
+    font-family: 'Preahvihear';
+    font-size: 280%;
+    font-weight: 150;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.barra1,
+.barra2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--6);
+}
+
+.barra1,
+.barra2 p {
+    font-size: 150%;
+    color: var(--1);
+}
+
+.barra1 p {
+    width: 50%;
+    margin-left: 4rem;
+}
+
+.barra1 img {
+    width: 35%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 1rem;
+}
+
+.barra2 img {
+    width: 40%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 1rem;
+}
+
+.barra2 p {
+    width: 50%;
+    text-align: end;
+    margin-right: 2rem;
+}
+
+.final h1 {
+    width: 44%;
+    font-size: 120%;
+    font-weight: 150;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+@media screen and (min-width: 1340px) {
+    .final h1 {
+        margin-top: 10%;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .final h1 {
+        margin-top: 20%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    body {
+        background-image: url('../Imgs/quienesSomosRes.png');
+    }
+
+    .galletas {
+        margin-bottom: 1rem;
+    }
+
+    .text1 h1 {
+        width: 100%;
+        font-size: 210%;
+        font-weight: 200;
+        margin-top: 8rem;
+    }
+    
+    .text1 p {
+        width: 70%;
+        margin-top: 2rem;
+        font-size: 140%;
+    }
+
+    .cont h1 {
+        font-size: 180%;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .barra1,
+    .barra2 {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .barra1,
+    .barra2 p {
+        font-size: 80%;
+        color: var(--1);
+    }
+        
+    .barra1 p {
+        width: 80%;
+        margin-left: 1rem;
+        margin-top: 1rem;
+        text-align: center;
+    }
+
+    .barra1 img {
+        width: 65%;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        margin-left: 0;
+    }
+
+    .barra2 img {
+        width: 70%;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        margin-left: 0;
+    }
+
+    .barra2 p {
+        width: 80%;
+        text-align: center;
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+
+    .final h1 {
+        width: 80%;
+        font-size: 80%;
+        font-weight: 150;
+    }
+}
