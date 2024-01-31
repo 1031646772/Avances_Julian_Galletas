@@ -5,6 +5,7 @@
     --color33:#822121;
 }
 footer{
+    margin-top: 6rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

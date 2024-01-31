@@ -83,7 +83,7 @@ function leerP(ArregloJson){
                 <h1>${item.Nombre}</h1>
                 <div class="containerButton">
                     <button onclick="TomarDatos(${item.Id_Producto})">Actualizar</button>
-                    <button onclick="EliminarProducto(${item.Id_Producto})">Eliminar</button>
+                    <button onclick="EliminarProducto(${item.Id_Producto})">Inactivar</button>
                 </div>
             </div>
         `
