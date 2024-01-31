@@ -5,6 +5,11 @@
 }
 
 @media only screen and (max-width: 800px) {
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;   
+    }
     .vectorcito{
         display: none;
     }
@@ -29,7 +34,8 @@
         top: -2rem;
     }
     .menu{
-        margin-left: 85%;
+        margin-top: 5%;
+        margin-left: 83%;
         width: 3rem;
     }
     .nuestrosp{
@@ -43,10 +49,10 @@
     }
     .logRes{
         display: block;
-        width: 8rem;
+        width: 6rem;
         margin-top: 0;
         position: relative;
-        top: -5rem;
+        top: -3rem;
         margin-left: 3%;
     }
     body{
@@ -61,131 +67,128 @@
         position: relative;
         top: -5rem;
     }
-    *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;   
-       }
-       body{
-           background-color: bisque;
-       }
-       body .productos-res{
-           display: flex;
-           flex-direction: column;
-           align-items: center;
-       }
-       :root{
-           --color1:#846A31;
-           --color2:#C18E61;
-       }
-       .card-res1{
-           background-color: var(--color1);  
-           width: 15rem;
-           height: 13rem;
-           margin-top: 10%;
-           border-radius: 2rem;
-           display: flex;
-           flex-direction: column;
-           align-items: center;
-           text-align: center;
-           
-       }
-       .card-res img{
-           width: 13rem;
-           height: 9.5rem;
-           border: 0.5rem solid var(--color2);
-           border-radius: 3rem;
-           margin-top: 5%;
-       }
-       .card-res h1{
-           font-family: 'Poppins-medium', sans-serif;
-           margin-top: 2%;
-           font-size: 1.7rem;
-           color: white;
-           width: 10rem;
-       }
-       /* por si se pasa de la longitud deseada en el nombre*/
-       .card-res2{
-           background-color: var(--color1);  
-           width: 15rem;
-           height: 15rem;
-           margin-top: 10%;
-           border-radius: 2rem;
-           display: flex;
-           flex-direction: column;
-           align-items: center;
-           text-align: center;
-           
-       }
-       .card-res2 img{
-           width: 13rem;
-           height: 9.5rem;
-           border: 0.5rem solid var(--color2);
-           border-radius: 3rem;
-           margin-top: 5%;
-       }
-       .card-res2 h1{
-           font-family: 'Poppins-medium', sans-serif;
-           margin-top: 2%;
-           font-size: 1.7rem;
-           color: white;
-           width: 10rem;
-       }
-       
-       /* estilos contenedor semi transparente*/
-       .container-oculto{
-           position: fixed;
-           top: 0;
-           left: 0;
-           width: 100%;
-           height: 100%;
-           background-color: rgba(0, 0, 0, 0.5);
-           z-index: 2;
-       }
-       .boton-cerrar-modal{
-           width: rem;
-           font-size: 2rem;
-           border: none;
-           background-color: transparent;
-           color: white;
-           margin-top: 20%;
-           display: flex;
-           margin-left: 85%;
-       }
-       .card-desc{
-           background-color: var(--color2);
-           width: 17rem;
-           height: auto;
-           margin-top: 1rem;
-           margin-left: 15%;
-           border-radius: 2rem;
-       }
-       .card-desc img{
-           margin-top: 2rem;
-           border-radius: 5rem;
-           width: 11rem;
-           height: 9rem;
-           margin-left: 2.8rem;
-       }
-       .card-desc h1{
-           font-family: 'Poppins',sans-serif;
-           color: white;
-           text-align: center;
-       }
-       .card-desc p{
-           font-family: 'Poppins-medium',sans-serif;
-           color: white;
-           text-align: center;
-           width: 13rem;
-           margin-top: 1rem;
-           margin-left: 12%;
-       }
-       .title-container{
-           font-family: 'Poppins-medium',sans-serif;
-           color: white;
-           text-align: center;
-       }
-       .productoContac{
+    
+    body{
+        background-color: bisque;
+    }
+    body .productos-res{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    :root{
+        --color1:#846A31;
+        --color2:#C18E61;
+    }
+    .card-res1{
+        background-color: var(--color1);  
+        width: 15rem;
+        height: auto;
+        margin-top: 10%;
+        border-radius: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        
+    }
+    .card-res img{
+        width: 13rem;
+        height: 9.5rem;
+        border: 0.5rem solid var(--color2);
+        border-radius: 3rem;
+        margin-top: 5%;
+    }
+    .card-res h1{
+        font-family: 'Poppins-medium', sans-serif;
+        margin-top: 2%;
+        font-size: 1.7rem;
+        color: white;
+        width: 10rem;
+    }
+    /* por si se pasa de la longitud deseada en el nombre*/
+    .card-res2{
+        background-color: var(--color1);  
+        width: 15rem;
+        height: auto;
+        margin-top: 10%;
+        border-radius: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        
+    }
+    .card-res2 img{
+        width: 13rem;
+        height: 9.5rem;
+        border: 0.5rem solid var(--color2);
+        border-radius: 3rem;
+        margin-top: 5%;
+    }
+    .card-res2 h1{
+        font-family: 'Poppins-medium', sans-serif;
+        margin-top: 2%;
+        font-size: 1.7rem;
+        color: white;
+        width: 10rem;
+        margin-bottom: 6%;
+    }
+    
+    /* estilos contenedor semi transparente*/
+    .container-oculto{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 2;
+    }
+    .boton-cerrar-modal{
+        width: rem;
+        font-size: 2rem;
+        border: none;
+        background-color: transparent;
+        color: white;
+        margin-top: 20%;
+        display: flex;
+        margin-left: 85%;
+    }
+    .card-desc{
+        background-color: var(--color2);
+        width: 17rem;
+        height: auto;
+        margin-top: 1rem;
+        margin-left: 15%;
+        border-radius: 2rem;
+    }
+    .card-desc img{
+        margin-top: 2rem;
+        border-radius: 5rem;
+        width: 11rem;
+        height: 9rem;
+        margin-left: 2.8rem;
+    }
+    .card-desc h1{
+        font-family: 'Poppins',sans-serif;
+        color: white;
+        text-align: center;
+    }
+    .card-desc p{
+        font-family: 'Poppins-medium',sans-serif;
+        color: white;
+        text-align: center;
+        width: 13rem;
+        margin-top: 1rem;
+        margin-left: 12%;
+    }
+    .title-container{
+        font-family: 'Poppins-medium',sans-serif;
+        color: white;
+        text-align: center;
+    }
+    .productoContac{
         background-color: var(--colorRojito);
         margin-left: 33%;
         color: white;
@@ -195,9 +198,9 @@
         border-radius: 1rem;
         margin-top: 1rem;
         margin-bottom: 1rem;
-       } 
-       .productoContac:hover{
+    } 
+    .productoContac:hover{
         background-color:#9b2929
-       }      
-       
+    }      
+
 }

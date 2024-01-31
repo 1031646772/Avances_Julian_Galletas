@@ -71,13 +71,16 @@
 
     .nav {
         margin-left: 0;
+        position: absolute;
+        top: -4px;
         display: none;
         justify-content: center;
         flex-direction: column;
         align-items: center;
         width: 100%;
-        height: 13rem;
+        height: 16rem;
         background-color: var(--5);
+        z-index: 1;
     }
 
     .head {
@@ -93,8 +96,8 @@
     }
 
     .head img {
-        height: 2rem;
-        width: 2rem;
+        height: 4.2rem;
+        width: 4rem;
     }
     
     .nav ul {
@@ -133,5 +136,25 @@
         height: 10%;
         width: 10%;
         cursor: pointer;
+    }
+}
+
+@keyframes Menu {
+    0% {
+        opacity: 0;
+        transform: translateY(-10rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes Menu2 {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-3rem);
     }
 }
