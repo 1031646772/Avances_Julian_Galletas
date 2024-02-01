@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "node src/config/index.js"
+    "start": "node src/config/index.js"
   },
   "keywords": [],
   "author": "",
