@@ -80,9 +80,11 @@ body .Productos{
 .card p{
     margin-top: 2%;
     width:30rem;
+    height: 7rem;
     font-family: 'Poppins-medium', sans-serif;
     font-size: 1.5rem;
     color: white;
+    overflow: auto;
 }
 
 .card2{
@@ -120,9 +122,11 @@ body .Productos{
 .card2 p{
     margin-top: 2%;
     width:30rem;
+    height: 7rem;
     font-family: 'Poppins-medium', sans-serif;
     font-size: 1.5rem;
     color: white;
+    overflow: auto;
 }
 .Conocer-mas {
     font-family: 'Poppins-medium', sans-serif;

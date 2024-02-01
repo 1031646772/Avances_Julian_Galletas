@@ -135,7 +135,9 @@ function CrearModal(){
                 <img src="${item.Imagen}" alt="">
                 <div class="text-desc">
                     <h1>${item.Nombre}</h1>
+                    <div class="containers-p">
                     <p>${item.Descripcion}</p>
+                    </div>
                     <button class="productoContac">Contactanos</button>
                 </div>
             </div>
@@ -146,27 +148,29 @@ function CrearModal(){
     container_modals.innerHTML=nuevoDIV
 }
 
-function anadirEventos(){
-    // Bajo la misma logica añade eventos para las cards y esto lo hace recorriendo el arreglo 
-    // y tambien para un indice 
-    let indice=1
-    arreglo_Objetos.forEach(function (item){
-        const card=document.getElementById("cardP"+indice)
-        let container=document.getElementById("modal"+indice)
-        let botonCerrar=document.getElementById("cerrar-pro"+indice)
-        var container_productosnuevos= document.getElementById("productos-resM");
-        var body=document.body
-        card.addEventListener("click", ()=>{
-            container.style.display="block"
+function anadirEventos() {
+    let indice = 1;
+    arreglo_Objetos.forEach(function (item) {
+        const card = document.getElementById("cardP" + indice);
+        let container = document.getElementById("modal" + indice);
+        let botonCerrar = document.getElementById("cerrar-pro" + indice);
+        var container_productosnuevos = document.getElementById("productos-resM");
+        var body = document.body;
+
+        card.addEventListener("click", () => {
+            container.style.display = "block";
             body.style.overflow = 'hidden';
-        })
-        botonCerrar.addEventListener("click", ()=>{
-            container.style.display="none"
+        });
+
+        botonCerrar.addEventListener("click", () => {
+            container.style.display = "none";
             body.style.overflow = 'auto';
-        })
-        indice++
-    })
-    añadirAnimacion()
+        });
+
+        indice++;
+    });
+
+    añadirAnimacion();
 }
 function añadirAnimacion(){
     containerCard=document.querySelectorAll(".card-desc")

@@ -146,7 +146,7 @@
         z-index: 2;
     }
     .boton-cerrar-modal{
-        width: rem;
+        width: 1rem;
         font-size: 2rem;
         border: none;
         background-color: transparent;
@@ -155,38 +155,47 @@
         display: flex;
         margin-left: 85%;
     }
-    .card-desc{
+    .card-desc {
         background-color: var(--color2);
         width: 17rem;
-        height: auto;
-        margin-top: 1rem;
+        position: absolute;
+        top: 16%;
         margin-left: 15%;
         border-radius: 2rem;
     }
-    .card-desc img{
+    
+    .card-desc img {
         margin-top: 2rem;
         border-radius: 5rem;
         width: 11rem;
         height: 9rem;
         margin-left: 2.8rem;
     }
-    .card-desc h1{
-        font-family: 'Poppins',sans-serif;
+    
+    .card-desc h1 {
+        font-family: 'Poppins', sans-serif;
         color: white;
         text-align: center;
     }
-    .card-desc p{
-        font-family: 'Poppins-medium',sans-serif;
-        color: white;
+    .containers-p{
+        height: auto;
+    }
+    .card-desc p {
+        font-family: 'Poppins-medium', sans-serif;
+        color: rgb(255, 255, 255);
         text-align: center;
-        width: 13rem;
-        margin-top: 1rem;
+        margin-top: 0.5rem;
         margin-left: 12%;
+        width: 13rem;
     }
-    .title-container{
-        font-family: 'Poppins-medium',sans-serif;
+    
+    .title-container {
+        font-family: 'Poppins-medium', sans-serif;
         color: white;
         text-align: center;
+        position: absolute;
+        margin-left: 30%;
+        top: 10%;
     }
     .productoContac{
         background-color: var(--colorRojito);
