@@ -2,6 +2,17 @@ const { query } = require('express');
 const database=require('../config/database')
 const mysql2=require ('mysql2');
 
+let objeto={
+    Nombre:"",
+    Email:"",
+    Contrasena:"",
+    Token:0
+}
+
+function getObjeto(){
+    return objeto
+}
+
 function Ingresar(req, res){
     const {User, Contrasena}=req.body
     try{
@@ -24,6 +35,62 @@ function Ingresar(req, res){
     }
 }
 
+function GenerarTokenIniciosesion(req, res){
+    try{
+        const {Usuario}=req.body
+        console.log(Usuario)
+        const Squery=`select Id_user,Nombre,Email,Contrasena from User where Email='${Usuario}';`
+        const Exquery=mysql2.format(Squery)
+        database.query(Exquery,(err,result)=>{
+            console.log(result)
+            if (result && result [0] !=undefined && result[0]!=null){
+                crearToken(result[0])
+                if(objeto.Token !=0 && objeto.Token.length==6){
+                    res.json({message:"Se obtuvo el token correctamente"})
+                }
+                else{
+                    res.json({message:"El token probablemente no se genero"})
+                }
+            }
+            else{
+                console.log("los datos de la consulta pueden estar vacios")
+            }
+        })
+    }
+    catch(err){
+        console.log("hubo un error en el proceso de la solicitud fetch", err)
+    }
+
+}
+
+function crearToken(datosUsuario){
+    let token = Math.floor(Math.random() * 900000) + 100000;
+
+    objeto.Nombre=datosUsuario.Nombre,
+    objeto.Email=datosUsuario.Email,
+    objeto.Contrasena=datosUsuario.Contrasena,
+    objeto.Token=token
+    getObjeto()
+    
+}
+
+function TraerToken(req, res){
+    const {confirmacion}=req.body
+    try{
+        if (confirmacion==true && objeto.Token!=0){
+            res.json(objeto)
+        }
+        else{
+            console.log("El token o la confirmacion estan fallando")
+        }
+    }
+    catch(err){
+        console.log("Algo paso al enviar el token", err)
+    }
+}
+
 module.exports={
-    Ingresar
+    Ingresar,
+    GenerarTokenIniciosesion,
+    TraerToken
 }

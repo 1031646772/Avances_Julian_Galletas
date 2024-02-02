@@ -6,6 +6,7 @@ const modal = document.querySelector(".container-Mother");
 const contanierModal = document.getElementById("ModalLogin");
 const body=document.body
 
+
 document.addEventListener("DOMContentLoaded", () => {
     const user = document.getElementById("Nombre");
     const contrasena = document.getElementById("Contrasena");
@@ -81,13 +82,13 @@ form.addEventListener("submit", async(e)=>{
             }).then((response)=>response.json()).then((data)=>{
                 // evalua las promesas que tienen una data 
                 // Guardamos la informacion o el mensaje que devuelve el controlador en una variable
-
                 let valor= data.message;
                 if(valor==="Usuario encontrado"){
                     alert ("Bienvenido");
+                    Creartoken(user.value)
+                    getConfirmacion()
                     limpiarCampos()
-                    // Permitimos el acceso
-                    window.location.href="./views/GestionarP.html"
+                    //window.location.href="./views/GestionarP.html"
                 }
                 else{
                     alert("Usuario o contraseña incorrectos, reintente")
@@ -116,4 +117,28 @@ function limpiarCampos(){
     const contrasena = document.getElementById("Contrasena");
     user.value = "";
     contrasena.value = "";
+}
+
+async function Creartoken(nameUs){
+    console.log(nameUs)
+    try{
+        const response=await fetch("http://127.0.0.1:3000/users/CrearToken",{
+            method:'POST',
+            headers:{
+                'Content-Type':'application/json',
+            },
+            body:JSON.stringify({Usuario:nameUs}),
+        }).then((response)=>response.json()).then((data)=>{
+            let message=data.message
+            if(message=="Se obtuvo el token correctamente"){
+                console.log("Se creo correctamente")
+            }
+            else{
+                console.log("No se creo el token")
+            }
+        })
+    }
+    catch(err){
+        console.log("Hubo un error en la peticion fetch",err)
+    }
 }
