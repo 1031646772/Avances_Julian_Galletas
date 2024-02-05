@@ -12,9 +12,8 @@
     .menu{
         width: 3rem;
         height: 3rem;
-        position: relative;
-        top: -1rem;
-        margin-left: 83%;
+        margin-left: 85%;
+        margin-top: 5%;
     }
     .vectorcito{
         display: none;
@@ -31,18 +30,24 @@
     .imgMobile{
         display: block;
         right: 0;
-        margin-left: 0;
+        margin-left: -3%;
         left: 2rem;
         margin-top: 2rem;
+        position: relative;
+        top: -5rem;
     }
     #title{
         top: 0;
-        margin-top: 20%;
+        margin-top: 0%;
+        position: relative;
+        top: -3rem;
         font-size: 2rem;
     }
     .containerB2{
         margin-left:0%;
         text-align: center;
+        position: relative;
+        top: -2.5rem;
     }
     .containerB2 button{
         width: 14rem;

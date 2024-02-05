@@ -63,7 +63,6 @@ function quitarAnimacion() {
 //Evento listener para cuando se envie el formulario 
 // Ejecuta una funcion asincrona 
 form.addEventListener("submit", async(e)=>{
-    console.log("entro")
     e.preventDefault()
     // Utilizamos el prevent default para que evite realizar las operaciones normales para este evento 
     const user=document.getElementById("Nombre")
@@ -86,9 +85,8 @@ form.addEventListener("submit", async(e)=>{
                 if(valor==="Usuario encontrado"){
                     alert ("Bienvenido");
                     Creartoken(user.value)
-                    getConfirmacion()
                     limpiarCampos()
-                    //window.location.href="./views/GestionarP.html"
+                    window.location.href="./views/GestionarP.html"
                 }
                 else{
                     alert("Usuario o contraseña incorrectos, reintente")
@@ -130,6 +128,7 @@ async function Creartoken(nameUs){
             body:JSON.stringify({Usuario:nameUs}),
         }).then((response)=>response.json()).then((data)=>{
             let message=data.message
+            
             if(message=="Se obtuvo el token correctamente"){
                 console.log("Se creo correctamente")
             }

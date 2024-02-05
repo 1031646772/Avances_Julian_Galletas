@@ -45,12 +45,12 @@ function GenerarTokenIniciosesion(req, res){
             console.log(result)
             if (result && result [0] !=undefined && result[0]!=null){
                 crearToken(result[0])
-                if(objeto.Token !=0 && objeto.Token.length==6){
+                if(objeto.Token !=0 && objeto.Token.toString().length==6){
                     res.json({message:"Se obtuvo el token correctamente"})
                 }
                 else{
                     res.json({message:"El token probablemente no se genero"})
-                }
+                    }
             }
             else{
                 console.log("los datos de la consulta pueden estar vacios")
@@ -71,17 +71,18 @@ function crearToken(datosUsuario){
     objeto.Contrasena=datosUsuario.Contrasena,
     objeto.Token=token
     getObjeto()
-    
 }
 
 function TraerToken(req, res){
     const {confirmacion}=req.body
     try{
+        console.log(confirmacion)
+        console.log(objeto.Token)
         if (confirmacion==true && objeto.Token!=0){
-            res.json(objeto)
+            res.json({message:objeto})
         }
         else{
-            console.log("El token o la confirmacion estan fallando")
+            res.json({message:"El token o la confirmacion estan fallando"})
         }
     }
     catch(err){
@@ -94,3 +95,4 @@ module.exports={
     GenerarTokenIniciosesion,
     TraerToken
 }
+
