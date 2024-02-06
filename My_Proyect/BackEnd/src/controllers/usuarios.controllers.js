@@ -90,9 +90,31 @@ function TraerToken(req, res){
     }
 }
 
+function cerrarSesion(req,res){
+    const {confirm}=req.body;
+    try{
+        if (confirm==true){
+            objeto.Nombre="",
+            objeto.Email="",
+            objeto.Contrasena="",
+            objeto.Token=0,
+            getObjeto()
+            res.json({message:"Se cerro Sesion"});
+        }
+        else{
+            res.json({message:"Algo fallo al limpiar el usuario"})
+        }
+    }
+    catch(err){
+        console.log("Algo fallo al limpiar el objeto token del usuario", err);    
+    }
+}
+
+
 module.exports={
     Ingresar,
     GenerarTokenIniciosesion,
-    TraerToken
+    TraerToken,
+    cerrarSesion
 }
 

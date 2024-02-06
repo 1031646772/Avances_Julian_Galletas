@@ -57,7 +57,12 @@
     font-weight: 500;
     cursor: pointer;
 }
-
+#cerrarSesion{
+    background-color: transparent;
+    color: white;
+    font-size: 1.3rem;
+    border: none;
+}
 .ini {
     text-align: center;
 }
